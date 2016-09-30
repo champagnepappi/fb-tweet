@@ -1,6 +1,9 @@
 require 'test_helper'
 
 class UsersSignupTest < ActionDispatch::IntegrationTest
+  def setup
+    @user = users(:lesley)
+  end
   test "signup with invalid information" do
     get new_user_path
     assert_no_difference 'User.count' do
