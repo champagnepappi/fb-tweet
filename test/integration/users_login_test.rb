@@ -13,5 +13,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     assert_template 'sessions/new'
     assert_not flash.empty?
     assert_equal flash[:danger], "Invalid email and password combination"
+    get root_path
+    assert flash.empty?
   end
 end
