@@ -2,5 +2,7 @@
 <div id="home">
     <h1>Fb-Tweet</h1>
     <p>An application combining some facebook and twitter features</p>
+    <% unless logged_in? %>
     <p> <%= link_to "Create an Account", new_user_path, class: "button" %></p>
+    <% end %>
 </div>
