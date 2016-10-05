@@ -31,5 +31,6 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
       }
     }
     assert_redirected_to @user
+    assert is_logged_in?
   end
 end
