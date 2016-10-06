@@ -9,6 +9,7 @@
             <% unless logged_in? %>
                 <li> <%= link_to fa_icon('sign-in', text: "Login"), login_path %></li>
             <% else %>
+                <li> <%= link_to fa_icon('user', text: "Profile"), user_path %></li>
                 <li> <%= link_to fa_icon('sign-out', text: "Logout"), logout_path, method: :delete %></li>
             <% end %>
 
