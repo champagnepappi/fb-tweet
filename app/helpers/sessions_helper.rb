@@ -15,4 +15,10 @@ module SessionsHelper
     session.delete(:user_id) #delete user_id from session
     @current_user = nil      #set current user to nil
   end
+
+  def remember(user)
+    user.remember
+    cookies.permanent.signed[:user_id] = user.id
+    cookies.permanent[:remember_token] = user.remember_token
+  end
 end
