@@ -1,0 +1,12 @@
+<% if object.errors.any? %>
+    <div id="error_message">
+        <div class="callout alert">
+            Your input has <%= pluralize(object.errors.count, "error") %>
+    </div>
+    <ul>
+        <% object.errors.full_messages.each do |error|%>
+            <li> <%= error %></li>
+        <% end %>
+    </ul>
+    </div>
+<% end %>
