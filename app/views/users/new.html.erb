@@ -2,6 +2,7 @@
 <div class="medium-6 columns medium-offset-3">
     <h1>Create an Account Here</h1>
         <%= form_for(@user) do |f| %>
+            <%= render 'shared/error_messages', object: f.object %>
             <div class="medium-6 columns">
                 <%= f.label :first_name %>
                 <%= f.text_field :f_name %>
