@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  def setup
+    @user = User.new(name: "Cuty Pie", email: "elsy@gmail.com",
+                     password: "justme",password_confirmation: "justme")
+  end
 end
