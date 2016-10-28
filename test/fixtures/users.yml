@@ -6,3 +6,8 @@ lesley:
   email: lesley@gmail.com
   password_digest: <%= User.digest('password')%>
 
+dephney:
+    f_name: Dephney
+    l_name: Michaels
+    email: dephney@gmail.com
+    password_digest: <%= User.digest('password')%>
