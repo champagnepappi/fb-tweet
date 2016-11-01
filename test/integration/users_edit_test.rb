@@ -31,5 +31,7 @@ class UsersEditTest < ActionDispatch::IntegrationTest
       }
     }
     assert_redirected_to @user
+    assert_not flash.empty?
+    assert_equal flash[:success], "Profile Successfully Updated"
   end
 end
