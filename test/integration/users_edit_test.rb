@@ -12,6 +12,7 @@ class UsersEditTest < ActionDispatch::IntegrationTest
       user: {
         f_name: "Brad",
         l_name: "",
+        email: "yeah@me.com",
         password: "",
         password_confirmation: ""
       }
@@ -22,10 +23,15 @@ class UsersEditTest < ActionDispatch::IntegrationTest
   test "successful edit" do
     get edit_user_path(@user)
     assert_template 'users/edit'
+    f_name = "mark"
+    l_name = "Zuckerberg"
+    email = "mark@z.com"
+
     patch user_path(@user), params: {
       user: {
-         f_name: "mark",
-         l_name: "Zuckerberg",
+         f_name: f_name,
+         l_name: l_name,
+         email: email,
          password: "",
          password_confirmation: ""
       }
