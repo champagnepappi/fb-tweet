@@ -38,6 +38,13 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:f_name,:l_name,:email,:password,:password_confirmation)
   end
+  
+  def already_logged_in
+    if current_user
+      redirect_to root_url
+      flash[:message] = "You are signed up"
+    end
+  end
 
 end
 
