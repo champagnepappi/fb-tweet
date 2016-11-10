@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, except: [:new ,:create]
   before_action :already_logged_in, only: :new
+  before_action :correct_user, only: [:edit, :update]
 
   def new
     @user = User.new
