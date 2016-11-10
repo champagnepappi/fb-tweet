@@ -49,6 +49,8 @@ group :development, :test do
   gem 'sqlite3'
   gem 'spring'
   gem 'rails-controller-testing'
+  gem 'rspec-rails'
+  gem 'capybara'
 end
 
 group :development do
