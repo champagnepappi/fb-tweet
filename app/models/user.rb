@@ -1,7 +1,8 @@
 class User < ApplicationRecord
-  attr_accessor :remember_token
+  attr_accessor :remember_token, :activation_token
   validates :f_name,presence: true, length: {minimum: 3}
   validates :l_name,presence: true,  length: {minimum: 3}
+  before_save :downcase_email
 
   has_secure_password
   validates :password, length: {minimum: 5} , allow_blank: true
@@ -32,6 +33,11 @@ class User < ApplicationRecord
   def authenticated?(remember_token)
     return false if remember_digest.nil?
     BCrypt::Password.new(remember_digest).is_password?(remember_token)
+  end
+
+  private
+  def downcase_email
+    self.email = email.downcase
   end
 
 end
