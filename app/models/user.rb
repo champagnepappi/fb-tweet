@@ -3,6 +3,7 @@ class User < ApplicationRecord
   validates :f_name,presence: true, length: {minimum: 3}
   validates :l_name,presence: true,  length: {minimum: 3}
   before_save :downcase_email
+  before_create :create_activation_digest
 
   has_secure_password
   validates :password, length: {minimum: 5} , allow_blank: true
