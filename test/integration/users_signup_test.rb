@@ -3,6 +3,7 @@ require 'test_helper'
 class UsersSignupTest < ActionDispatch::IntegrationTest
   def setup
     @user = users(:lesley)
+    ActionMailer::Base.deliveries.clear
   end
   test "signup with invalid information" do
     get new_user_path
