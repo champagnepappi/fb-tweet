@@ -21,7 +21,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     assert_template 'users/new'
   end
 
-  test "signup with valid information" do
+  test "signup with valid information with account activation" do
     get new_user_path
     assert_difference 'User.count', 1 do
       post users_path, params: {
@@ -34,6 +34,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
         }
       }
     end
-    assert_redirected_to User.last
+    assert_equal 1, ActionMailer::Base.deliveries.size
+    # assert_redirected_to User.last
   end
 end
