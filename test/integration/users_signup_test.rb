@@ -35,6 +35,8 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
       }
     end
     assert_equal 1, ActionMailer::Base.deliveries.size
+    user = assigns(:user)
+    assert_not user.activated?
     # assert_redirected_to User.last
   end
 end
