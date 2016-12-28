@@ -31,6 +31,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
         password: 'password'
       }
     }
+    assert is_logged_in?
     assert_redirected_to @user
     follow_redirect!
     assert_template 'users/show'
