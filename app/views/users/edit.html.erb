@@ -5,12 +5,12 @@
             <%= render 'shared/error_messages', object: f.object %>
             <div class="medium-6 columns">
                 <%= f.label :first_name %>
-                <%= f.text_field :f_name %>
+                <%= f.text_field :f_name, placeholder: "Change your first name" %>
             </div>
 
             <div class="medium-6 columns">
                 <%= f.label :last_name %>
-                <%= f.text_field :l_name %>
+                <%= f.text_field :l_name, placeholder: "Change last name" %>
             </div>
 
             <div class="medium-12 columns">
