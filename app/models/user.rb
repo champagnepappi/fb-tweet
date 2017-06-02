@@ -1,7 +1,8 @@
 class User < ApplicationRecord
   attr_accessor :remember_token, :activation_token
-  validates :f_name,presence: true, length: {minimum: 3}
-  validates :l_name,presence: true,  length: {minimum: 3}
+  name_regex = /\A[a-z]+\Z/i
+  validates :f_name,presence: true, length: {minimum: 3}, format: {with: name_regex}
+  validates :l_name,presence: true,  length: {minimum: 3}, format: { with: name_regex }
   before_save :downcase_email
   before_create :create_activation_digest
 
