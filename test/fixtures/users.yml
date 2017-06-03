@@ -11,3 +11,9 @@ dephney:
     l_name: Michaels
     email: dephney@gmail.com
     password_digest: <%= User.digest('password')%>
+
+gloria:
+     f_name: gloria
+     l_name: vuyanzi
+     email: gloria@gmail.com
+     password_digest: <%= User.digest('password')%>
