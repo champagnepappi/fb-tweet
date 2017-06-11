@@ -17,3 +17,9 @@ gloria:
      l_name: vuyanzi
      email: gloria@gmail.com
      password_digest: <%= User.digest('password')%>
+
+ashley:
+    f_name: ashley
+    l_name: williams
+    email: ashley@gmail.com
+    password_digest: <%= User.digest('password')%>
