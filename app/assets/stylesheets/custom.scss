@@ -13,3 +13,7 @@
         margin: 0 0 30px 0;
     }
 }
+
+.field_with_errors input{
+     border: 2px solid red !important;
+}
