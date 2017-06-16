@@ -13,15 +13,7 @@
 
   <body>
       <%= render 'layouts/partials/header' %>
-      <div>
-      <% flash.each do |msg_type, message|%>
-          <div id="msg" class="alert <%= msg_type %>">
-          <%= message %>
-          </div>
-          <% end %>
-          </div>
-
-      <div>
+      <%= render 'layouts/partials/messages' %>
     <%= yield %>
     </div>
 
