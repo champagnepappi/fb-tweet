@@ -1,3 +1,7 @@
 <% provide(:title, @user.first_name)%>
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="row">
+    <div class="medium-12">
+        <p>Name: <%= @user.first_name %></p>
+        <p>Email: <%= @user.email %></p>
+    </div>
+</div>
