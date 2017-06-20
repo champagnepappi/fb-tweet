@@ -8,6 +8,7 @@ class PagesControllerTest < ActionDispatch::IntegrationTest
     get root_path
     assert_response :success
     assert_select 'title', "Home #{@common_title}"
+    assert_select "a[href=?]", login_path
   end
 
 end
