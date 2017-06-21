@@ -42,4 +42,15 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to login_url
   end
 
+  test "redirect update when wrong user logs in" do
+    log_in_as(@user2)
+    patch user_path(@user), params: {
+      user: {
+        f_name: @user.f_name,
+        email: @user.email
+      }
+    }
+    assert_redirected_to login_path
+  end
+
 end
