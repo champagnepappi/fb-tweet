@@ -19,6 +19,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   test "redirect user trying to edit without login in" do
     get edit_user_path(@user), params: {id: @user}
     assert_not flash.empty?
+    assert_select flash[:alert], "Login first to continue"
     assert_redirected_to login_url
   end
 
