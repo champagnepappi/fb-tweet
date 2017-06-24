@@ -4,7 +4,7 @@
     <div class="callout">
         <%= form_for(:session, url: login_path) do |f| %>
             <%= f.label :email %>
-            <%= f.email_field :email %>
+            <%= f.email_field :email, placeholder: "input email" %>
 
             <%= f.label :password %>
             <%= f.password_field :password %>
