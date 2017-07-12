@@ -9,7 +9,7 @@
  User.create!(
   f_name: "Kevin",
   l_name: "Santos",
-  email: "kevinsantos@gmail.com",
+  email: "justKevyne@gmail.com",
   password: "justpass",
   password_confirmation: "justpass"
 )
