@@ -11,5 +11,7 @@
   l_name: "Santos",
   email: "justKevyne@gmail.com",
   password: "justpass",
-  password_confirmation: "justpass"
+  password_confirmation: "justpass",
+  activated: true,
+  activated_at: Time.zone.now
 )
