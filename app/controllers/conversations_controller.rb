@@ -5,5 +5,7 @@ class ConversationsController < ApplicationController
     else
       @conversatiom = Conversation.create(conversation_params)
     end
+
+    return json: { conversation_id: @conversation.id }
   end
 end
