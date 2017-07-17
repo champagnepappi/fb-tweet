@@ -15,3 +15,13 @@
   activated: true,
   activated_at: Time.zone.now
 )
+
+ user = User.create!(
+   f_name: "Glorius",
+   l_name: "Vuyanzi",
+   email: "glo@gmail.com",
+   password: "hacked",
+   password_confirmatio: "hacked",
+   activated: true,
+   activated_at: Time.zone.now
+ )
