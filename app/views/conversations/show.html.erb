@@ -8,4 +8,11 @@
       <p> <%= link_to "<i class='fa fa-times'></>".html_safe, "#", class: "closeChat" , "data-cid" => @conversation.id%></p>
 
       </div>
+      <br clear="all">
+      <div class="chatboxcontent">
+      <% if @messages.any? %> 
+          <%= render @messages %>
+          <% end %>
+      </div>
+
 </div>
