@@ -6,4 +6,9 @@ class MessagesController < ApplicationController
     @message.save!
     @path = conversation_path(@conversation) 
   end
+
+  private
+  def message_params
+    params.require(:message).permit(:body)
+  end
 end
