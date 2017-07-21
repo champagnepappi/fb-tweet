@@ -15,6 +15,6 @@
 //= require foundation
 //= require turbolinks
 //= require_tree .
-//= require private_hub
+//= require private_pub
 
 $(function(){ $(document).foundation(); });
