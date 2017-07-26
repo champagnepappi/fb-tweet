@@ -1,9 +1,14 @@
 <% provide(:title, @user.f_name)%>
 <div class="row">
     <div class="medium-12">
-        <p>Name: <%= @user.f_name %></p>
-        <p>Email: <%= @user.email %></p>
-        <p> <%= link_to "Post Video", "#" %></p>
-        <p> <%= render 'shared/video_form' %></p>
+        <div class="medium-4 columns">
+            <p>Name: <%= @user.f_name %></p>
+            <p>Email: <%= @user.email %></p>
+            <p> <%= link_to "Post Video", "#" %></p>
+            <p> <%= render 'shared/video_form' %></p>
+        </div>
+        <div class="medium-8 columns">
+        </div>
     </div>
-</div>
+    <div>
+    </div>
