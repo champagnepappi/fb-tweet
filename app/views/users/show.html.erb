@@ -8,6 +8,12 @@
             <p> <%= render 'shared/video_form' %></p>
         </div>
         <div class="medium-8 columns">
+            <% if @user.videos.any? %>
+                <h3>Videos( <%= @user.videos.count %> )</h3>
+                <ol class="videos">
+                    <%= render @videos %>
+                </ol>
+                <% end %>
         </div>
     </div>
     <div>
