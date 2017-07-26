@@ -27,6 +27,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by(id: params[:id])
     @video = current_user.videos.build
+    @videos = @user.videos
   end
 
   def edit
