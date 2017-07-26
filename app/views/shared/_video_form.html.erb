@@ -1,0 +1,7 @@
+<%= form_for(@video, html: { multipart: true}) do |f|%>
+    <div class="field">
+   <%= f.text_area :content, placeholder: "Add video description" %> 
+    </div>
+    <%= f.submit "post", class: "button"%>
+    
+    <% end %>
