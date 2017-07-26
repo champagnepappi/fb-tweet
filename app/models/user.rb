@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :conversations, :foreign_key => :sender_id
+  has_many :videos
   attr_accessor :remember_token, :activation_token
   name_regex = /\A[a-z]+\Z/i
   validates :f_name,presence: true, length: {minimum: 3}, format: {with: name_regex}
