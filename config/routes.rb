@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
 
 
-  get 'videos/new'
-
-  get 'videos/show'
-
   get 'password_resets/new'
 
   get 'password_resets/edit'
@@ -12,6 +8,7 @@ Rails.application.routes.draw do
   root 'pages#home'
 
   resources :users
+  resources :videos
 
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
