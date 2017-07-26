@@ -1,6 +1,8 @@
 <li>
    <span class="content">
    <%= video.content %>
-   <%= video_tag video.video_url.to_s :controls => true %>
+   </span>
+   <span class="video">
+       <%= cl_video_tag(video.video_url.to_s , :controls => true,:width=>400, :crop=>"scale") %>
    </span>
 </li>
