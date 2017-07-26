@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170710134920) do
+ActiveRecord::Schema.define(version: 20170726083703) do
 
   create_table "conversations", force: :cascade do |t|
     t.integer  "sender_id"
@@ -42,6 +42,14 @@ ActiveRecord::Schema.define(version: 20170710134920) do
     t.string   "activation_digest"
     t.boolean  "activated"
     t.datetime "activated_at"
+  end
+
+  create_table "videos", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_videos_on_user_id"
   end
 
 end
