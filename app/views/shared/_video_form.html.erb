@@ -1,9 +1,12 @@
 <%= form_for(@video, html: { multipart: true}) do |f|%>
+    <%= render 'shared/error_messages', object: f.object %>
     <div class="field">
    <%= f.text_area :content, placeholder: "Add video description" %> 
     </div>
     <%= f.submit "post", class: "button"%>
+    <span class="video">
     <%= f.file_field :video %>
+    </span>
     
     <% end %>
 
