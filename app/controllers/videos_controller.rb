@@ -7,7 +7,7 @@ class VideosController < ApplicationController
     if @video.save
       redirect_to current_user
     else
-      redirect_to root_path
+      redirect_to current_user
       flash[:danger] = "There was a problem posting the video"
     end
   end
