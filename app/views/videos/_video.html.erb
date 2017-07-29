@@ -3,7 +3,9 @@
    <%= video.content %>
    </span>
    <span class="video">
+       <% if video.video?%>
        <%= video_tag video.video_url.to_s , :controls => true %>
+       <% end %>
    </span>
 </li>
 
