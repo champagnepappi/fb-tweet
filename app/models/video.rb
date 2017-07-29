@@ -1,6 +1,7 @@
 class Video < ApplicationRecord
   mount_uploader :video, VideoUploader
   belongs_to :user
+  validates :video, presence: true
 
   validate :video_size
 
