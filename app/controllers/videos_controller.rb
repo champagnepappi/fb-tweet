@@ -1,4 +1,6 @@
 class VideosController < ApplicationController
+  before_action :already_logged_in
+  
   def new
   end
 
