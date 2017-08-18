@@ -5,6 +5,12 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.new(comment_params)
+    if @comment.save
+      redirect_to Video.find(@comment.video_id)
+    else
+      flash[:danger] = "There was a problem "
+      redirect_to Video.find(@comment.video_id)
+    end
   end
 
   private
