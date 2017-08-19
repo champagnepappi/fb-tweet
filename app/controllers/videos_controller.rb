@@ -15,6 +15,7 @@ class VideosController < ApplicationController
   end
 
   def show
+    @video = Video.find_by(id: params[:video_id])
   end
 
   private
