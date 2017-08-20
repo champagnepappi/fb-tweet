@@ -21,7 +21,7 @@
    l_name: "Vuyanzi",
    email: "glo@gmail.com",
    password: "hacked",
-   password_confirmatio: "hacked",
+   password_confirmation: "hacked",
    activated: true,
    activated_at: Time.zone.now
  )
