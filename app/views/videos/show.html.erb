@@ -1,1 +1,4 @@
 <%= @video.content %>
+<% if @video.video?%>
+    <%= video_tag @video.video_url.to_s , :controls => true, width: '80%', height: '15%' %>
+<% end %>
