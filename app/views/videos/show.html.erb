@@ -1,5 +1,9 @@
 <% provide(:title, "video")%>
-<%= @video.content %>
-<% if @video.video?%>
-    <%= video_tag @video.video_url.to_s , :controls => true, width: '80%', height: '15%' %>
-<% end %>
+<div class="row">
+    <p><span class="content"><%= @video.content %></span></p>
+    <span class="video">
+    <% if @video.video?%>
+        <%= video_tag @video.video_url.to_s , :controls => true, width: '80%', height: '15%' %>
+    <% end %>
+    </span>
+</div>
