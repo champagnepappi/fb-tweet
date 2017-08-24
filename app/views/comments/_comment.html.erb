@@ -1,5 +1,5 @@
 <li>
-    <span class="user"> <%= link_to comment.user.name, comment.user if comment.user %></span>
+    <span class="user"> <%= link_to comment.user.f_name, comment.user if comment.user %></span>
     <span class="content"> <%= comment.content %></span>
     <span class="timestamp">
         <% if comment.created_at%>
