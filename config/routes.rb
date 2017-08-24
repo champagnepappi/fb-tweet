@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :videos
+  resources :comments
 
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
