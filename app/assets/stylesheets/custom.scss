@@ -3,7 +3,27 @@
     padding-top: 160px;
 }
 .top-bar {
+}
 
+.user {
+    margin-top: 5em;
+    padding-top: 0;
+}
+
+.gravatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.content {
+    display: block;
+    margin-left: 60px;
+}
+.timestamp {
+    color: gray;
+    display: block;
+    margin-left: 60px;
 }
 
 #error_message {
