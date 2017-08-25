@@ -17,6 +17,12 @@
                 <%= f.text_area :content, placeholder: "Add comment ..." %>
                 <%= f.submit "comment", class: "button" %>
             <% end %>
+
+        <% if @comments.any?%>
+            <ol class="comments">
+                <%= render @comments %>
+            </ol>
+            <% end %>
         </div>
     </div>
 </div>
