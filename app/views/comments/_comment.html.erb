@@ -7,4 +7,7 @@
             Posted <%= time_ago_in_words(comment.created_at)  %> ago.
         <% end %>
     </span>
+    <% if current_user?(comment.user)%>
+        <%= link_to "delete" , comment, method: :delete, data: { confirm: "Sure you wanna delete this comment??" } %>
+        <% end %>
 </li>
