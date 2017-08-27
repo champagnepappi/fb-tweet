@@ -10,6 +10,7 @@
    </span> <br>
    <span class="comments">
          <%= link_to fa_icon('comments'), video_path(id: video.id) %> 
+         <%= pluralize(video.comments.count, "comment") %>
    </span>
 </li>
 
