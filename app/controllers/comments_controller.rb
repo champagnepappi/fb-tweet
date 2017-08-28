@@ -17,6 +17,8 @@ class CommentsController < ApplicationController
 
   def destroy
     @comment.destroy
+    flash[:success] = "Comment deleted"
+    redirect_to request.referrer
   end
 
   private
@@ -26,6 +28,6 @@ class CommentsController < ApplicationController
 
   def correct_user
     @comment = Comment.find_by(id: params[:id])
-    redirect_to root_url if @comment.nil
+    redirect_to root_url if @comment.nil?
   end
 end
